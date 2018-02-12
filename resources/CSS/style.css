@@ -39,7 +39,7 @@ header .colmar {
   font-weight: bold;
 }
 
-nav {
+header nav {
   display: flex;
   justify-content: space-between;
 }
@@ -121,7 +121,14 @@ nav {
   margin: 3rem 0 0 6rem;
   padding: 2rem 0;
   width: 70%;
-  border-radius: 1rem;
+}
+
+.button:hover {
+  color: orange;
+  background-color: white;
+  transition-timing-function: linear;
+  transition-duration: .3s;
+  transition
 }
 
 /* Information Container */
@@ -228,14 +235,14 @@ nav {
   background-color: lightgray;
 }
 
-.degree-container h1 {
+.degree-title {
   font-size: 2.125rem;
   font-weight: bold;
   text-align: center;
   padding: 4rem 0 3rem 0;
 }
 
-/* Degrees */
+/* Degree Section */
 
 .degrees {
   display: flex;
@@ -284,4 +291,55 @@ nav {
   background-color: orange;
   transition-timing-function: linear;
   transition-duration: .3s;
+}
+
+/* Thesis Section */
+
+.thesis-title {
+  font-size: 2.125rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 4rem 0 1rem 0;
+}
+
+video {
+  margin-left: 1rem;
+}
+
+.left video {
+  width: 90.175%;
+  height: auto;
+}
+
+.fisma {
+  line-height: 1.1;
+}
+
+/* Footer */
+
+footer {
+  width: 100%;
+  height: 3.5rem;
+  padding-top: 0.3rem;
+  background-color: orange;
+}
+
+footer nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer span {
+  padding-left: 1.2rem;
+}
+
+.footer-menu {
+  display: flex;
+  padding-right: 1.2rem;
+}
+
+.footer-menu li {
+  margin: 1rem;
+
 }
