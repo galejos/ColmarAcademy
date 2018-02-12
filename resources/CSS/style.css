@@ -2,10 +2,6 @@
 
 /* Universal Styles */
 
-/*div {
-  border: 1px solid black;
-}*/
-
 html {
   font-size: 16px;
   font-family: 'Montserrat', sans-serif;
@@ -14,6 +10,17 @@ html {
 a {
   color: black;
   text-decoration: none;
+}
+
+img {
+  display: block;
+  height: auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* Header */
@@ -35,7 +42,7 @@ header img {
 }
 
 header .colmar {
-  color: gray;
+  color: orange;
   font-weight: bold;
 }
 
@@ -58,9 +65,37 @@ header nav {
   font-weight: bold;
 }
 
+.mobile-menu {
+  display: none;
+}
+
 .colmar-color {
   color: gray;
   font-weight: bold;
+}
+
+@media only screen and (max-width: 1024px) {
+  header div {
+    font-size: 1.5rem;
+  }
+
+  header img {
+    height: 2.5rem;
+  }
+
+  .menu {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .desktop-menu {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
 }
 
 /* Banner Container */
@@ -72,18 +107,22 @@ header nav {
   background-color: gray;
 }
 
+@media only screen and (max-width: 1024px) {
+  .banner-container {
+    height: 25rem;
+  }
+}
+
 /* Banner */
+
+.banner img {
+  max-width: 98%;
+  position: relative;
+}
 
 .banner-content {
   display: flex;
   align-items: center;
-  max-width: 1800px;
-}
-
-.banner img {
-  min-width: 80%;
-  max-width: 98%;
-  padding-top: 0.15rem;
 }
 
 .text-content {
@@ -98,14 +137,14 @@ header nav {
 
 .text-content h1 {
   font-size: 4.5rem;
-  width: 100%;
+  max-width: 100%;
   padding: 0 0 2rem 6rem;
 }
 
 .text-content h3 {
   font-size: 1.5rem;
   padding: 0 0 2rem 6rem;
-  width: 90%;
+  max-width: 90%;
 }
 
 .text-content h1 span {
@@ -120,7 +159,7 @@ header nav {
   text-align: center;
   margin: 3rem 0 0 6rem;
   padding: 2rem 0;
-  width: 70%;
+  max-width: 70%;
 }
 
 .button:hover {
@@ -129,6 +168,57 @@ header nav {
   transition-timing-function: linear;
   transition-duration: .3s;
   transition
+}
+
+@media only screen and (max-width: 1024px) {
+  .banner-content  {
+    justify-content: center;
+  }
+
+  .banner img {
+    max-width: 75%;
+  }
+
+  .text-content {
+    margin-left: -9.5rem;
+  }
+
+  .text-content h1 {
+    font-size: 2.2rem;
+    margin-right: 8rem;
+    max-width: 80%;
+  }
+
+  .text-content h3 {
+    font-size: 1.1rem;
+    width: 100%;
+    margin-right: 8rem;
+  }
+
+  .button {
+    padding: 1.5rem 0;
+    font-size: 1rem;
+    text-align: center;
+    margin: 1rem 1.5rem 0 0;
+    padding: 1.5rem 0;
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .banner-content {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .banner img {
+    width: 25rem;
+    height: auto;
+    margin: 10rem 0 0 0;
+  }
+
 }
 
 /* Information Container */
@@ -142,6 +232,7 @@ header nav {
 
 .info {
   display: flex;
+  justify-content: space-around;
   line-height: 1.5;
   padding-bottom: 2rem;
 }
@@ -209,6 +300,10 @@ header nav {
   padding-right: 2.2rem;
 }
 
+.box img.mobile {
+  display: none;
+}
+
 .box-info {
   display: flex;
   flex-direction: column;
@@ -229,10 +324,81 @@ header nav {
   font-weight: bold;
 }
 
+@media only screen and (max-width: 1024px) {
+  .picture-info h1 {
+    font-size: 2rem;
+    line-height: 1;
+  }
+
+  .picture-info p {
+    font-size: 1rem;
+  }
+
+  .picture-info h4 {
+    font-size: 0.9rem;
+  }
+
+  .right {
+    margin-left: -2rem;
+  }
+
+  .box {
+    width: 25rem;
+    height: 5.5rem;
+    border: 0.05rem solid white;
+    padding: 1.9em 1.2rem;
+  }
+
+  .box img {
+    width: 30%;
+    height: auto;
+  }
+
+  .box-info {
+    line-height: 1.5rem;
+  }
+
+  .box-info h2 {
+    font-size: 1.5rem;
+  }
+
+  .box-info h3 {
+    font-size: 0.8rem;
+
+  }
+
+  .box-info span {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .left.info {
+    display: none;
+  }
+
+  .box {
+    flex-direction: column;
+    height: 10.5rem;
+  }
+
+  .box img {
+    display: none;
+  }
+
+  .box img.mobile {
+    display: block;
+    max-width: 100%;
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+}
+
 /* Degress Container */
 
 .degree-container {
   background-color: lightgray;
+  padding-bottom: 1.5rem;
 }
 
 .degree-title {
@@ -293,6 +459,30 @@ header nav {
   transition-duration: .3s;
 }
 
+@media only screen and (max-width: 560px) {
+  .degree-title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 2.2rem 0 1.3rem 0;
+  }
+
+  .degrees {
+    flex-direction: column;
+  }
+
+  .degree-text {
+    line-height: 1.1;
+    padding: 0 0 0 1.5rem;
+  }
+
+  .degree-info img,
+  .degree-info h4,
+  .degree-info p {
+    display: none;
+  }
+}
+
 /* Thesis Section */
 
 .thesis-title {
@@ -314,6 +504,21 @@ video {
 .fisma {
   line-height: 1.1;
 }
+
+@media only screen and (max-width: 560px) {
+  .box.thesis {
+    display: none;
+  }
+
+  .left.thesis .picture-info {
+    display: none;
+  }
+
+  .left-picture video {
+    margin-right: 5rem;
+  }
+}
+
 
 /* Footer */
 
