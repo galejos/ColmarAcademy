@@ -136,13 +136,14 @@ nav {
 .info {
   display: flex;
   line-height: 1.5;
+  padding-bottom: 2rem;
 }
 
 .left {
   display: flex;
   flex-direction: column;
   max-width: 71rem;
-  margin-left: 2.55rem;
+  margin-left: 1.65rem;
 }
 
 .left img {
@@ -158,7 +159,7 @@ nav {
 .picture-info h1 {
   font-size: 3.125rem;
   font-weight: bold;
-  color: dimgray;
+  color: orange;
   padding-bottom: 1rem;
 }
 
@@ -169,7 +170,7 @@ nav {
 
 .picture-info h4 {
   font-weight: bold;
-  padding: 1.5rem 0 1.5rem 0;
+  padding-top: 1.5rem;
 }
 
 .right {
@@ -188,12 +189,99 @@ nav {
   background-color: lightgray;
 }
 
+.box:hover {
+  color: white;
+  background-color: orange;
+  transition-timing-function: linear;
+  transition-duration: .3s;
+}
+
 .box img {
   width: 28%;
   height: auto;
+  padding-right: 2.2rem;
 }
 
 .box-info {
   display: flex;
   flex-direction: column;
+  line-height: 2;
+}
+
+.box-info h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.box-info h3 {
+  font-size: 1.4rem;
+}
+
+.box-info span {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* Degress Container */
+
+.degree-container {
+  background-color: lightgray;
+}
+
+.degree-container h1 {
+  font-size: 2.125rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 4rem 0 3rem 0;
+}
+
+/* Degrees */
+
+.degrees {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 2rem;
+}
+
+.degree-info {
+  display: flex;
+  flex-flow: column wrap;
+  max-width: 33rem;
+  height: auto;
+  margin: 1rem 1.25rem;
+}
+
+.degree-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  width: 95.5%;
+  height: 8rem;
+  padding: .5rem 0 1rem 1.5rem;
+  line-height: 2;
+}
+
+.degree-text h2 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: slategray;
+}
+
+.degree-text p {
+  width: 85%;
+  line-height: 1.2;
+}
+
+.degree-text h4,
+.degree-text p {
+  font-size: 1.1rem;
+}
+
+.degree-text:hover {
+  color: white;
+  background-color: orange;
+  transition-timing-function: linear;
+  transition-duration: .3s;
 }
