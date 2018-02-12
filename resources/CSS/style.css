@@ -11,8 +11,9 @@ html {
   font-family: 'Montserrat', sans-serif;
 }
 
-.container {
-
+a {
+  color: black;
+  text-decoration: none;
 }
 
 /* Header */
@@ -20,6 +21,7 @@ html {
 header {
   height: 3.5rem;
   margin: 0.5rem 1.5rem;
+  padding-top: 0.5rem;
 }
 
 header div {
@@ -52,6 +54,10 @@ nav {
   margin: auto 1rem;
 }
 
+.menu li:hover {
+  font-weight: bold;
+}
+
 .colmar-color {
   color: gray;
   font-weight: bold;
@@ -59,7 +65,7 @@ nav {
 
 /* Banner Container */
 
-.banner.container {
+.banner-container {
   display: flex;
   align-items: center;
   height: 50rem;
@@ -116,4 +122,78 @@ nav {
   padding: 2rem 0;
   width: 70%;
   border-radius: 1rem;
+}
+
+/* Information Container */
+
+.information-container {
+  display: flex;
+  padding: 3.5rem 0 2rem 1.5rem;
+}
+
+/* Information Section */
+
+.info {
+  display: flex;
+  line-height: 1.5;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  max-width: 71rem;
+  margin-left: 2.55rem;
+}
+
+.left img {
+  width: 90.175%;
+  height: auto;
+  padding: 0 1.5rem 1.3rem 0.5rem;
+}
+
+.picture-info {
+  padding-left: 0.5rem;
+}
+
+.picture-info h1 {
+  font-size: 3.125rem;
+  font-weight: bold;
+  color: dimgray;
+  padding-bottom: 1rem;
+}
+
+.picture-info p {
+  max-width: 85%;
+  font-size: 1.2rem;
+}
+
+.picture-info h4 {
+  font-weight: bold;
+  padding: 1.5rem 0 1.5rem 0;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  margin-left: -4rem;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  width: 40rem;
+  height: 12.5rem;
+  border: 0.05rem solid white;
+  padding: 1.9em 1.9rem;
+  background-color: lightgray;
+}
+
+.box img {
+  width: 28%;
+  height: auto;
+}
+
+.box-info {
+  display: flex;
+  flex-direction: column;
 }
